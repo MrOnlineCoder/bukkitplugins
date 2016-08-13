@@ -1,0 +1,67 @@
+<div class="row">
+    <h1>Заказать</h1>
+    На этой странице Вы можете заказать услугу для Вашего сервера
+    <div class="panel panel-default" ref-model="step1">
+      <div class="panel-heading">
+        <h3 class="panel-title">Шаг 1: Что вы хотите заказать?</h3>
+      </div>
+      <div class="panel-body">
+            <select class="form-control" ref-model="orderType">
+                <option>Самописный плагин</option>
+                <option>Настройка плагина</option>
+                <option>Сборка</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="panel panel-default" ref-model="step2">
+      <div class="panel-heading">
+        <h3 class="panel-title">Шаг 2: Заполните информацию о услуге</h3>
+      </div>
+      <div class="panel-body">
+        <form ref-model="orderForm">
+          <div id="orderContainer">
+              <input type="text" ref-model="orderName" placeholder="Введите название сборки/плагина..." class="form-control" required>
+              <br>
+              <select class="form-control" ref-model="orderVersion" required>
+                <option>Выберите версию сервера...</option>
+                <option>1.10</option>
+                <option>1.9</option>
+                <option>1.8.1</option>
+                <option>1.8</option>
+                <option>1.7.10</option>
+                <option>1.7.9</option>
+                <option>1.7.4</option>
+                <option>1.7.2</option>
+                <option>1.7</option>
+                <option>1.6.4</option>
+                <option>1.6.2</option>
+                <option>1.5.2</option>
+              </select>
+              <br>
+              <select class="form-control" ref-model="orderPayway" required>
+                <option>Выберите способ оплаты...</option>
+                <option>WebMoney (UAH)</option>
+                <option>QIWI</option>
+                <option>Пополнение счета Steam</option>
+              </select>
+              <br>
+              <textarea ref-model="orderDesc" placeholder="Введите описание..." class="form-control" required></textarea>
+              <br>
+              <input type="submit" ref-model="orderSubmit" class="btn btn-success" value="Отправить">
+            </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="panel panel-default" ref-model="orderResult" style="display:none;">
+      <div class="panel-heading">
+        <h3 class="panel-title">Шаг 3: Отправьте результат</h3>
+      </div>
+      <div class="panel-body">
+          <p>Пожалуйтса, отправьте этот текст разработчику: <a href="https://vk.com/computerman78">Ссылка на ВК</a></p>
+          <textarea class="form-control" ref-model="orderResultText" rows=8 readonly></textarea>
+        </div>
+    </div>
+</div>
+</div>
