@@ -36,6 +36,7 @@ function init() {
 	Cobblestone.route("home", "views/home.html", noop);
 	Cobblestone.route("order", "views/order.html", OrderController);
 	Cobblestone.route("contacts", "views/contacts.html", noop);
+	Cobblestone.route("rules", "views/rules.html", noop);
 	Cobblestone.navigate("home");
 }
 
